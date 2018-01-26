@@ -1,5 +1,5 @@
 def faculty_evaluation_result(nev, rar, som, oft, voft, alw):
-''' Write code to calculate faculty evaluation rating according to asssignment instructions
+    ''' Write code to calculate faculty evaluation rating according to asssignment instructions
 
     :param nev: Never
     :param rar: Rarely
@@ -8,6 +8,7 @@ def faculty_evaluation_result(nev, rar, som, oft, voft, alw):
     :param voft: Very Often
     :param alw: Always
     :return: rating as a string'''
+
 
     total = nev + rar + som + oft + voft + alw
     nev_ratio = nev / total

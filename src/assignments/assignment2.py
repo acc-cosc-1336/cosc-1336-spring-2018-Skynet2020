@@ -21,29 +21,17 @@ def faculty_evaluation_result(nev, rar, som, oft, voft, alw):
     alw_ratio = alw / total
 
     if alw_ratio + voft_ratio >= 0.9:
-        return "Excellent"
-        
-        
+        return str("Excellent")
     elif alw_ratio + voft_ratio + oft_ratio >= 0.8:
-        return "Very Good"
-        
-        
+        return str("Very Good")
     elif alw_ratio + voft_ratio + oft_ratio + som_ratio >= 0.7:
-        return "Good"
-        
-        
+        return str("Good")
     elif alw_ratio + voft_ratio + oft_ratio + som_ratio + rar_ratio >= 0.6:
-        return "Needs Improvement"
-        
-        
+        return str("Needs Improvement")
     else:
-        return "Unacceptable"
+        return str("Unacceptable")
         
-   
-
-
-
-
+  
 
 def get_ratings(nev,rar,som, oft,voft, alw):
     '''

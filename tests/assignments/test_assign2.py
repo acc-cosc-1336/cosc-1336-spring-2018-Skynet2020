@@ -17,3 +17,6 @@ class Test_Assignment2(unittest.TestCase):
 
     def test_unacceptable_rating(self):
         self.assertEqual("Unacceptable", faculty_evaluation_result(176, 148, 0, 5, 11, 7))
+
+if __name__ == '__main__':
+    unittest.main(verbosity=2)

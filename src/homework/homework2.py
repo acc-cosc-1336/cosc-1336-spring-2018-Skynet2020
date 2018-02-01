@@ -25,40 +25,60 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
     if time_type == 12:
         if hour < 1 and hour > 12:
             return 'Invalid hours(1-12)'
+        elif minutes < 0 and minutes > 59:
+            return 'Invalid minutes(range 0-59)'
+        elif seconds < 0 and seconds > 59:
+            return 'Invalid seconds(range 0-59)'
 
+        
     elif time_type == 24:
         if hour < 0 and hour > 23:
             return 'Invalid hours(range 0-23)'
+        elif minutes < 0 and minutes > 59:
+            return 'Invalid minutes(range 0-59)'
+        elif seconds < 0 and seconds > 59:
+            return 'Invalid seconds(range 0-59)'
     else:
         return 'Invalid time_type(12 or 24 only)'
-    #==============================================
-    if minutes < 0 and minutes > 59:
-        return 'Invalid minutes(range 0-59)'
-    #==============================================
-    if seconds < 0 and seconds > 59:
-        return 'Invalid seconds(range 0-59)'
-    #==============================================
-    if time_type == 12:
-        return meridiem
+   
     #==============================================
     if time_type == 12:                             #check hour < 10
         if hour < 10:
             hour = '0' + str(hour)
-            print(hour)
-        elif minutes < 10:                          #check minute < 10
+            return hour
+        elif minutes < 10:                          #check minutes < 10
             minutes = '0' + str(minutes)
-            print(minutes)
+            return minutes
         elif seconds < 10:                          #check seconds < 10
             seconds = '0' + str(seconds)
-            print(seconds)
+            return seconds
     #==============================================
-
+    if time_type == 24:                             #check hour < 10
+        if hour < 10:
+            hour = '0' + str(hour)
+            return hour
+                
+        elif minutes < 10:                          #check minutes < 10
+            minutes = '0' + str(minutes)
+            return minutes
+                
+        elif seconds < 10:                          #check seconds < 10
+            seconds = '0' + str(seconds)
+            return seconds
+           
+    #==============================================
+    time = 9
     
     if time_type == 12:
-        time = str(hour) + ':' + str(minutes) + ':' + str(seconds)
-        time = time + ' ' + meridiem
-
+        time = str(hour) + str(minutes) + str(seconds) + str(meridiem)
         return time
+    
+    elif time_type == 24:
+        time = str(hour) + ':' + str(minutes) + ':' + str(seconds)
+        return time
+    
+    return time
+
 
 def time_from_utc(utc_offset, utc_zero_time):
     '''

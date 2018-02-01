@@ -23,21 +23,22 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
     '''
     #=============================================
     if time_type == 12:
-        if hour < 1 and hour > 12:
-            return 'Invalid hours(1-12)'
-        elif minutes < 0 and minutes > 59:
+        if hour < 1 or hour > 12:
+            return 'Invalid hours(range 1-12)'
+        elif minutes < 0 or minutes > 59:
             return 'Invalid minutes(range 0-59)'
-        elif seconds < 0 and seconds > 59:
+        elif seconds < 0 or seconds > 59:
             return 'Invalid seconds(range 0-59)'
 
         
     elif time_type == 24:
-        if hour < 0 and hour > 23:
+        if hour < 0 or hour > 23:
             return 'Invalid hours(range 0-23)'
-        elif minutes < 0 and minutes > 59:
+        elif minutes < 0 or minutes > 59:
             return 'Invalid minutes(range 0-59)'
-        elif seconds < 0 and seconds > 59:
+        elif seconds < 0 or seconds > 59:
             return 'Invalid seconds(range 0-59)'
+        
     else:
         return 'Invalid time_type(12 or 24 only)'
    
@@ -52,6 +53,7 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
         elif seconds < 10:                          #check seconds < 10
             seconds = '0' + str(seconds)
             return seconds
+    
     #==============================================
     if time_type == 24:                             #check hour < 10
         if hour < 10:
@@ -67,10 +69,10 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
             return seconds
            
     #==============================================
-    time = 9
+    time = 0
     
     if time_type == 12:
-        time = str(hour) + str(minutes) + str(seconds) + str(meridiem)
+        time = str(hour) + ':' + str(minutes)+ ':' + str(seconds) + ' ' + meridiem
         return time
     
     elif time_type == 24:

@@ -51,3 +51,4 @@ class Test_Assign3(unittest.TestCase):
 
     def test_list_of_primes_w_50(self):
         self.assertEqual('2,3,5,7,11,13,17,19,23,29,31,37,41,43,47,', list_of_primes(50))
+unittest.main(verbosity=2)    

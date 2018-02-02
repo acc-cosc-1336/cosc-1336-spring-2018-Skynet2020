@@ -45,39 +45,33 @@ def get_time(hour, minutes, seconds, time_type, meridiem='AM'):
     #==============================================
     if time_type == 12:                             #check hour < 10
         if hour < 10:
-            hour = '0' + str(hour)
-            return hour
+            hour = '0' + str(hour)            
         elif minutes < 10:                          #check minutes < 10
-            minutes = '0' + str(minutes)
-            return minutes
+            minutes = '0' + str(minutes)            
         elif seconds < 10:                          #check seconds < 10
             seconds = '0' + str(seconds)
-            return seconds
-    
+                
     #==============================================
     if time_type == 24:                             #check hour < 10
         if hour < 10:
             hour = '0' + str(hour)
-            return hour
-                
+                            
         elif minutes < 10:                          #check minutes < 10
             minutes = '0' + str(minutes)
-            return minutes
-                
+                            
         elif seconds < 10:                          #check seconds < 10
             seconds = '0' + str(seconds)
-            return seconds
-           
+                       
     #==============================================
     time = 0
     
     if time_type == 12:
         time = str(hour) + ':' + str(minutes)+ ':' + str(seconds) + ' ' + meridiem
-        return time
+        
     
     elif time_type == 24:
         time = str(hour) + ':' + str(minutes) + ':' + str(seconds)
-        return time
+        
     
     return time
 

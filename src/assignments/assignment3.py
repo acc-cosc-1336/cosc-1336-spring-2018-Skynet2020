@@ -15,7 +15,6 @@ def decimal_to_binary(number):
     return binary value
     WRITE YOUR CODE AFTER THE THREE QUOTES BELOW
     '''
-    number = 255
     binary = ''
 
     for x in range (7, -1, -1):

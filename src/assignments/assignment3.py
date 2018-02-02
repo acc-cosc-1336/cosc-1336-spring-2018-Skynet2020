@@ -47,10 +47,10 @@ def sum_square_of_number(number):
     '''
     sum_of_squares = 0
 
-    for number in range(1, 4):
-        square = number ** 2
+    for x in range(1, number+1):
+        square = x ** 2
         sum_of_squares += square
-        print(number, '\t', square)
+        print(x, '\t', square)
     return sum_of_squares
 
 def is_prime(n):

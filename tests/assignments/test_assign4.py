@@ -23,10 +23,10 @@ class Test_Assign4(unittest.TestCase):
         self.assertNotEqual (1, sample_function(2))
 
     def test_factorial_one(self):
-        self.assertEqual(5, factorial(5))
+        self.assertEqual(120, factorial(5))
 
     def test_factorial_one(self):
-        self.assertEqual(6, factorial(6))
+        self.assertEqual(720, factorial(6))
 
         
 #create two test cases for the factorial function, one test case with a value of 5 and the other with value of 6

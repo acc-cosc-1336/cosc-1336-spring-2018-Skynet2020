@@ -1,4 +1,4 @@
-from src.assignments.assignment4 import factorial
+from assignment4 import factorial
 
 def main():#void function
     '''
@@ -23,10 +23,10 @@ def main():#void function
         while x<0 or x>10:
             print('Invalid value')
             x = int(input("Enter a number: "))
-            result = factorial(number)
-            print(result)
-            keep_going = input('Do you want to continue? ')
-
+        result = factorial(x)
+        print(result)
+        keep_going = input('Do you want to continue? ')
+            
 
 
 

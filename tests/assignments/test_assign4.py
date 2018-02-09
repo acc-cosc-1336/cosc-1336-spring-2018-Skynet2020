@@ -23,6 +23,9 @@ class Test_Assign4(unittest.TestCase):
         self.assertNotEqual (1, sample_function(2))
     def test_factorial_one(self):
         self.assertEqual(2, factorial(5))
+
+    def test_factorial_one(self):
+        self.assertEqual(2, factorial(6))
 #create two test cases for the factorial function, one test case with a value of 5 and the other with value of 6
 #THE NAME OF THE FUNCTION MUST BEGIN WITH test OTHERWISE THE TestCase suite will not recognize it as a test case.
 

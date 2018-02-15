@@ -25,3 +25,9 @@ class TestHomework2(unittest.TestCase):
     #WRITE A TEST FOR get_grade_points with arguments 3 and 4
 
     #WRITE A TEST FOR get_grade_point_average with arguments 9.0 and 36.0
+from src.homework.homework4 import valid_letter_grade
+
+class TestHomework4(unittest.TestCase):
+
+    def valid_letter_grade(self):
+        self.assertEqual(A, valid_letter_grade(A));

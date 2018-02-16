@@ -15,7 +15,3 @@ class Test_Assign5(unittest.TestCase):
         self.assertEqual('00111111', recursive_decimal_binary(63, 7))
 
 unittest.main(verbosity = 2)
-    
-    #write test cases with arguments 85 and 63 for recursive_decimal_binary function
-
-

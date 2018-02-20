@@ -33,8 +33,6 @@ class TestHomework2(unittest.TestCase):
 
 class TestHomework4(unittest.TestCase):
 
-    class TestHomework4(unittest.TestCase):
-
     def valid_letter_grade_w_value_B(self):
         self.assertEqual('B', valid_letter_grade('B'));
     def valid_letter_grade_w_value_Z(self):

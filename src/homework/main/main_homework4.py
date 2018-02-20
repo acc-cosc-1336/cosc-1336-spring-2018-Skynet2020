@@ -21,62 +21,35 @@ def main():
     how_many_students = int(input('Enter the number of students here: '))    
     how_many_classes = int(input('Enter the number of classes here: '))
     print()
-    sum_grade = 0
-    sum_credit_hours = 0
-    total_grade = 0
-    total_grade_points = 0
-    total_credit_hours = 0
+    
     for i in range(1, how_many_students+1):        
+        total_grade_points = 0
+ +      total_credit_hours = 0  
         print('For student', str(i))
         for n in range(1, how_many_classes+1):
             grade = input('Enter a letter grade for class ' + \
                            str(n) +\
-                            ': ')            
-            check_1 = valid_letter_grade(grade)
-            check_2 = get_credit_points(check_1)
+                            ': ') 
+            valid = valid_letter_grade(grade)
+ +            while not valid:
+ +                grade = input('Enter a letter grade for class ' + \
+ +                           str(n) +\
+ +                            ': ')            
+ +                valid = valid_letter_grade(grade)
+ +                
+ +            credit_points = get_credit_points(grade)
             credit_hours = int(input('Enter credit hours for class ' +\
                                  str(n) +\
                                   ' here: '))
-            sum_credit_hours += credit_hours
-            grade_points = get_grade_points(credit_hours, check_2)
-            sum_grade += grade_points
-        total_grade_points = sum_grade 
-        total_credit_hours = sum_credit_hours
-        sum_credit_hours = 0
-        sum_grade = 0
-        grade_points = 0
+           
+            grade_points = get_grade_points(credit_hours, credit_points)
+ +            total_credit_hours += credit_hours
+ +            total_grade_points += grade_points
         
-        print('Total grade point is: ', format(total_grade_points, '.2f'))
-        GPA_calc = get_grade_point_average(total_credit_hours, total_grade_points)
+        GPA = get_grade_point_average(total_credit_hours, total_grade_points)
+ +        print("Student", i, "GPA is", format(GPA, ".2f"))
         print()
-                    
-
-##            sum_grade += check_2            
-##        total_grade = sum_grade
-##        sum_grade = 0
-##        print('Total grade for student', str(i), 'is: ' + str(total_grade))
-##        credit_hours = int(input('Enter total credit hours for student ' +\
-##                                 str(i) +\
-##                                  ' here: '))
-##        grade_points = get_grade_points(credit_hours, total_grade)
-        
-
-
-
-        
-##    credit_points = get_credit_points(letter_grade)
-##    
-##    var1 = get_grade_points(credit_hours, credit_points)
-##    var2 = get_grade_point_average(credit_hours, grade_points)
-
-
-            
-            
-##        check_the_range = valid_letter_grade(letter_grade)
-##        turn_into_number = get_credit_points(letter_grade)
-##        remember_the_grade += turn_into_number
-
-
+         
 #CALL THE MAIN FUNCTION
 
 main()

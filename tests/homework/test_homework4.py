@@ -8,7 +8,7 @@ from src.homework.homework4 import get_credit_points
 from src.homework.homework4 import get_grade_points
 from src.homework.homework4 import get_grade_point_average
 
-class TestHomework2(unittest.TestCase):
+class TestHomework4(unittest.TestCase):
 
     def test_example(self):
         '''

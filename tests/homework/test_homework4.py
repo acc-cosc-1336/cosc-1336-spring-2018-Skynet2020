@@ -61,4 +61,4 @@ class TestHomework4(unittest.TestCase):
     def get_grade_point_average_w_value_9_and_36(self):
         self.assertEqual(4.00, get_grade_point_average(9.00, 36.00));
 
-unittest.main(verbosity = 2)
+    unittest.main(verbosity=2)

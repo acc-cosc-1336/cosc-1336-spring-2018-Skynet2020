@@ -3,6 +3,10 @@ import unittest
 #write the import statements to bring in homework 4 functions
 #valid_letter_grade, get_credit_points, get_grade_points, and get_grade_point_average
 from src.homework.homework4 import sample_function
+from src.homework.homework4 import valid_letter_grade
+from src.homework.homework4 import get_credit_points
+from src.homework.homework4 import get_grade_points
+from src.homework.homework4 import get_grade_point_average
 
 class TestHomework2(unittest.TestCase):
 
@@ -25,7 +29,7 @@ class TestHomework2(unittest.TestCase):
     #WRITE A TEST FOR get_grade_points with arguments 3 and 4
 
     #WRITE A TEST FOR get_grade_point_average with arguments 9.0 and 36.0
-from src.homework.homework4 import valid_letter_grade
+
 
 class TestHomework4(unittest.TestCase):
 

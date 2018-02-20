@@ -8,7 +8,7 @@ from src.homework.homework4 import get_credit_points
 from src.homework.homework4 import get_grade_points
 from src.homework.homework4 import get_grade_point_average
 
-class TestHomework2(unittest.TestCase):
+class TestHomework4(unittest.TestCase):
 
     def test_example(self):
         '''
@@ -29,9 +29,6 @@ class TestHomework2(unittest.TestCase):
     #WRITE A TEST FOR get_grade_points with arguments 3 and 4
 
     #WRITE A TEST FOR get_grade_point_average with arguments 9.0 and 36.0
-
-
-class TestHomework4(unittest.TestCase):
 
     def valid_letter_grade_w_value_B(self):
         self.assertEqual('B', valid_letter_grade('B'));
@@ -62,4 +59,4 @@ class TestHomework4(unittest.TestCase):
     def get_grade_point_average_w_value_9_and_36(self):
         self.assertEqual(4.00, get_grade_point_average(9.00, 36.00));
 
-unittest.main(verbosity = 2)
+#unittest.main(verbosity = 2)

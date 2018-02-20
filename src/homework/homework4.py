@@ -5,10 +5,10 @@ def sample_function(value):
 def valid_letter_grade(letter_grade):
     x = letter_grade        
     if x == 'A' or x == 'a' or x == 'B' or x == 'b' or x == 'C' or x == 'c' or \
- +       x == 'D' or x == 'd' or x == 'F' or x == 'f':
- +        return True
- +  else:
- +        return False
+        x == 'D' or x == 'd' or x == 'F' or x == 'f':
+        return True
+    else:
+        return False
     return letter_grade
 
 def get_credit_points(letter_grade):

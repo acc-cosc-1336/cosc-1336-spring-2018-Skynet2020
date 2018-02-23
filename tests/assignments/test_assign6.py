@@ -1,6 +1,6 @@
 import unittest
 #write the import for function get_count_A_C_G_and_T_in_string
-from assignment6 import get_count_A_C_G_and_T_in_string
+from src.assignments.assignment6 import get_count_A_C_G_and_T_in_string
 
 class Test_Assign6(unittest.TestCase):
 

@@ -5,6 +5,8 @@ def get_count_A_C_G_and_T_in_string(dna_string):
     :param dna_string: a DNA string
     :return: the count of As, Cs, Gs, and Ts in the dna_string
     '''
+    
+    
     dna_string = dna_string.upper()
     count_A = 0
     count_C = 0
@@ -19,4 +21,5 @@ def get_count_A_C_G_and_T_in_string(dna_string):
             count_G += 1
         elif  i == 'T':
             count_T += 1
+   
     return count_A, count_C, count_G, count_T

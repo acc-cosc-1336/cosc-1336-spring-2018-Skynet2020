@@ -36,5 +36,5 @@ class TestHomework6(unittest.TestCase):
     def test_get_gc_content_w_CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT_argument(self):
         self.assertEqual(60.919540, get_gc_content('CCACCCTCGTGGTATGGCTAGGCATTCAGGAACCGGAGAACGCTTCAGACCAGCCCGGACTGGGAACCTGCGGGCAGTAGGTGGAAT'))
 
-
-unittest.main(verbosity = 2)
+if __name__ == '__main__':
+  unittest.main(verbosity = 2)

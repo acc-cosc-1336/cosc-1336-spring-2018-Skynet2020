@@ -31,23 +31,23 @@ def main():
                            str(n) +\
                             ': ') 
             valid = valid_letter_grade(grade)
- +            while not valid:
- +                grade = input('Enter a letter grade for class ' + \
+ +          while not valid:
+ +              grade = input('Enter a letter grade for class ' + \
  +                           str(n) +\
  +                            ': ')            
- +                valid = valid_letter_grade(grade)
+ +              valid = valid_letter_grade(grade)
  +                
- +            credit_points = get_credit_points(grade)
+ +          credit_points = get_credit_points(grade)
             credit_hours = int(input('Enter credit hours for class ' +\
                                  str(n) +\
                                   ' here: '))
            
             grade_points = get_grade_points(credit_hours, credit_points)
- +            total_credit_hours += credit_hours
- +            total_grade_points += grade_points
+ +          total_credit_hours += credit_hours
+ +          total_grade_points += grade_points
         
         GPA = get_grade_point_average(total_credit_hours, total_grade_points)
- +        print("Student", i, "GPA is", format(GPA, ".2f"))
+ +      print("Student", i, "GPA is", format(GPA, ".2f"))
         print()
          
 #CALL THE MAIN FUNCTION

@@ -55,7 +55,15 @@ def handle_option_1():
     keep_going = 'y'
     while keep_going == 'y':
         DNA_string_1 = input('Enter a DNA-code using letters A, C, G and T: ')
+        
+        while len(DNA_string_1) != 10:
+            DNA_string_1 = input('Enter a DNA-code using letters A, C, G and T: ')
+        
         DNA_string_2 = input('Enter another DNA-code using the same letters: ')
+        
+        while len(DNA_string_2) != 10:
+            DNA_string_2 = input('Enter another DNA-code using the same letters: ')
+        
         mutations = get_point_mutations(DNA_string_1, DNA_string_2)
         print(mutations)
         keep_going = input('Do you want to continue? Y/N: ')

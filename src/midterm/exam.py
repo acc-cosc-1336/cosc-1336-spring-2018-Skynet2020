@@ -13,9 +13,6 @@ def get_miles_per_hour(km, minutes):
         hours = minutes/60    
         return round(km/hours * 0.621371, 2)
 
-print(get_miles_per_hour(32, 60))
-
-
 '''
 10 points
 Create a function named get_bonus_pay_amount with parameter sales that returns the bonus pay amount.
@@ -47,8 +44,6 @@ def get_bonus_pay_amount(sales):
         return sales * 0.08
     else:
         return 'Invalid arguments'
-
-print(get_bonus_pay_amount(500))
 
 '''
 10 points

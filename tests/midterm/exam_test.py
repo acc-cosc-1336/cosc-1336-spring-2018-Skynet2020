@@ -1,5 +1,6 @@
 import unittest
-from src.midterm.exam import get_miles_per_hour, get_bonus_pay_amount
+from src.midterm.exam import get_miles_per_hour, get_bonus_pay_amount, reverse_string, \
+     get_list_min_max, get_list_min_max_file
 
 #write import statements for exam functions
 
@@ -35,6 +36,7 @@ class Test_Midterm(unittest.TestCase):
         5 points
         Test with value My String Data return value should be ataD gnirtS yM
         '''
+        self.assertEqual('ataD gnirtS yM', reverse_string('My String Data'))
 
 
 
@@ -43,6 +45,7 @@ class Test_Midterm(unittest.TestCase):
         5 points
         Test with ['joe', 10, 15, 20, 30, 40]    Returns:    [10, 40]
         '''
+        self.assertEqual([10,40], get_list_min_max(['joe', 10, 15, 20, 30, 40]))
 
 
 
@@ -51,6 +54,7 @@ class Test_Midterm(unittest.TestCase):
         5 points
         Test with quiz.data file the return value should be [2,89]
         '''
+        self.assertEqual([2,89], get_list_min_max_file())
 
 if __name__ == '__main__':
     unittest.main(verbosity=2)

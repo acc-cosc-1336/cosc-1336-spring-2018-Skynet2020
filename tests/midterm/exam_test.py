@@ -1,5 +1,5 @@
 import unittest
-from exam import get_miles_per_hour, get_bonus_pay_amount
+from src.midterm.exam import get_miles_per_hour, get_bonus_pay_amount
 
 #write import statements for exam functions
 

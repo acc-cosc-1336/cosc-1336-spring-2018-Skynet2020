@@ -63,13 +63,14 @@ CREATE A TEST CASE IN THE exam_test.py file.
 '''
 
 def reverse_string(string1):
-    i = 0
-    while i <= len(string1):
-        print(string1[::-1])
-        i += 1
+    index = len(string1)-1
+    return_string = ''
 
-reverse_string('My String Data')
+    while index > -1:
+        return_string += string1[index]
+        index -= 1
 
+    return return_string
 
 
 '''
@@ -85,12 +86,10 @@ Returns:
 
 CREATE A TEST CASE IN THE exam_test.py file.
 '''
-list1 = ['joe', 10, 15, 20, 30, 40]
 def get_list_min_max(list1):
     lowest = min(list1[1::])
     largest = max(list1[1::])
     return [lowest, largest]
-print(get_list_min_max(list1))
 
 
 
@@ -116,22 +115,19 @@ Return Value:
 '''
 def get_list_min_max_file():
     file = open('quiz.dat', 'r')
-    return_list = []
-        
+    tmp_list = []
+
     for line in file:
-        if line.isdigit():
-            return_list.append(line)
-            
-        value = get_list_min_max(return_list)
-            
+        list1 = line.split()
+        i = 0
+        while i < len(list1):
+            if list1[i].isdigit():
+                list1[i] = int(list1[i])
+            i += 1
 
+        tmp_list += get_list_min_max(list1)
 
-##            list1 = line.split()
-##        return_list += list1
-##    value = get_list_min_max(return_list)
-       
     file.close()
-    return  value
-print(get_list_min_max_file())
+    return get_list_min_max(tmp_list)
 
 

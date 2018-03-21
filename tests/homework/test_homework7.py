@@ -33,7 +33,7 @@ class TestHomework7(unittest.TestCase):
           ]
 
     def test_get_p_distance_matrix(self):
-        self.assertEqual(print_get_p_distance_matrix(), arr)
+        self.assertEqual(print_get_p_distance_matrix(arr), arr)
 
     
 if __name__ == '__main__':

@@ -1,5 +1,5 @@
 import unittest
-from homework7 import get_p_distance_matrix, print_get_p_distance_matrix
+from src.homework.homework7 import get_p_distance_matrix, print_get_p_distance_matrix
 #write import statement for homework 7 file
 
 

@@ -1,4 +1,4 @@
-from homework7 import get_p_distance_matrix, print_get_p_distance_matrix
+from src.homework.homework7 import get_p_distance_matrix, print_get_p_distance_matrix
 '''
 Write a main function to...
 Read p_distance.dat file

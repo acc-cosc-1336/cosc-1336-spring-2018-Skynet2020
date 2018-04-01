@@ -16,6 +16,7 @@ class Test_Assign8(unittest.TestCase):
         invoice_item = InvoiceItem('Widget1', 10, 5)
 
         #create the assert code
+        self.assertEqual(50, invoice_item.get_extended_cost())
 
     def test_invoice__w_3_invoice_items(self):
         '''
@@ -33,8 +34,9 @@ class Test_Assign8(unittest.TestCase):
         invoice.add_invoice_item(InvoiceItem('Widget3', 20, 10))
 
         #create the assert equal code
+        self.assertEqual(306, invoice.get_invoice_total())
 
 
 
-if __name__ == '__main__':
-    unittest.main(verbosity=2)
+#if __name__ == '__main__':
+ #   unittest.main(verbosity=2)

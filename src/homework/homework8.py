@@ -30,7 +30,7 @@ Otherwise it returns 'Item not found'
 '''
 def remove_inventory_widget(widget_name, widgets):
     if widget_name not in widgets:
-        print('Item not found')
+        return 'Item not found'
     else:
         del widgets[widget_name]
-        print('Record deleted')
+        retrn 'Record deleted'

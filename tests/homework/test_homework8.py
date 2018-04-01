@@ -32,9 +32,11 @@ class Test_Assign8(unittest.TestCase):
 
     #create a test to remove Widget0, get the length of self.widgets, the length should be 2
     #in same test, check that return value is 'Record deleted'
-    def test_add_widget0_remove_record(self):
-        remove_inventory_widget('Widget0', self.widgets)        
-        self.assertEqual(0, self.widgets.get('Widget0', 0))
+    def test_widget0_remove_record(self):
+        result = remove_inventory_widget('Widget0', self.widgets)
+        self.assertEqual(2, len(self.widgets))
+        self.assertEqual('Record deleted', result)
+
 
 
 if __name__ == '__main__':

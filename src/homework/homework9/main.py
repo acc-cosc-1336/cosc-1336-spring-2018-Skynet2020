@@ -7,6 +7,6 @@ def main():
     dice = Player()
     
     print('Rolling the dice')
-    dice.roll_doubles()
+    print(dice.roll_doubles())
 
 main()

@@ -1,5 +1,5 @@
 import unittest
-from src.homework.homework9 import die
+from src.homework.homework9 die import Die
 #Write the import statement for the Die class
 
 class TestHomework9(unittest.TestCase):

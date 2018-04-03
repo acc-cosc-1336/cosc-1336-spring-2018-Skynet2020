@@ -24,13 +24,11 @@ class Player:
         '''
         
         while self.__die1 != self.__die2:
-            self.__die1 = random.randint(1, 6)
-            self.__die2 = random.randint(1, 6)
-            print('Dice roll result:', self.__die1, self.__die2)
-            if self.__die1 == self.__die2:
-                print('You got the double!')
+            roll1 = self.__die1.roll()
+            roll2 = self.__die2.roll()
+            print('Dice roll result:', roll1, roll2)
+            if roll1 == roll2:
+                return 'You got the double!'
        
     def get_sideup(self):
-        return self.__die1, self.__die2
-
-
+        return roll1, roll2

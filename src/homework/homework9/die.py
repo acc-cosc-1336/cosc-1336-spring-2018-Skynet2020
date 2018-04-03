@@ -11,7 +11,7 @@ class Die:
         '''
         Define a constructor method with one attribute sides with a values of 6.
         '''
-        self.__sideup = random.randint(1, 6)
+        self.__sideup = 1
         
     def roll(self):
         '''

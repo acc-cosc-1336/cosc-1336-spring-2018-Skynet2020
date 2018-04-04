@@ -22,13 +22,9 @@ class Player:
         The roll_doubles method that will roll die1 and die2 (attributes from constructor method),
         display rolled values,and continue iterating until a double is rolled.
         '''
-        
-        while self.__die1 != self.__die2:
+        rolled_double = False
+        while rolled_double == False:
             roll1 = self.__die1.roll()
             roll2 = self.__die2.roll()
             print('Dice roll result:', roll1, roll2)
-            if roll1 == roll2:
-                return 'You got the double!'
-       
-    def get_sideup(self):
-        return roll1, roll2
+            rolled_double = roll1 == roll2

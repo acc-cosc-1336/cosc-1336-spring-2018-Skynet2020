@@ -50,10 +50,10 @@ while keep_going == 'y':
 
 print(invoice1.get_invoice_total())
 print()
-invoice2.get_invoice_total()
+print(invoice2.get_invoice_total())
 #ASSIGNMENT11: call get invoice total method of invoice2 object
 print()
-invoice3.get_invoice_total()
+print(invoice3.get_invoice_total())
 #ASSIGNMENT11: call get invoice total method of invoice3 object
 print()
 

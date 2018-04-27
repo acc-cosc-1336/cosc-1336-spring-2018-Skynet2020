@@ -1,3 +1,4 @@
-from src.assignments.assignment13.win import Win
+from win import Win
+# src.assignments.assignment13.
 
 w = Win()
